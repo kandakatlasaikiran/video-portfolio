@@ -155,8 +155,9 @@ const Contact = () => {
                   This site is protected by reCAPTCHA and the Google <a href="#" className="underline hover:text-white transition-colors">Privacy Policy</a> and <a href="#" className="underline hover:text-white transition-colors">Terms of Service</a> apply.
                 </p>
                 <div className="flex flex-col sm:flex-row sm:justify-between sm:items-end gap-6">
-                  <p className="max-w-[250px] leading-relaxed">
-                    For information on how to unsubscribe, please review our <a href="#" className="underline hover:text-white transition-colors">privacy policy</a>.
+                  <p className="max-w-[250px] leading-relaxed flex items-center gap-4">
+                    <a href="https://github.com/kandakatlasaikiran" target="_blank" rel="noopener noreferrer" className="underline hover:text-white transition-colors">GitHub</a>
+                    <a href="https://www.instagram.com/kandakatla_saikiran/" target="_blank" rel="noopener noreferrer" className="underline hover:text-white transition-colors">Instagram</a>
                   </p>
                   
                   <button
