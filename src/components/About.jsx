@@ -8,7 +8,7 @@ import shopifyImage from "../assets/about/shopify.png";
 
 const About = () => {
   return (
-    <section className="bg-[#C03E2E] pt-20 pb-40 px-6 md:px-12 w-full relative overflow-hidden font-sans">
+    <section id="about" className="bg-[#C03E2E] pt-20 pb-40 px-6 md:px-12 w-full relative overflow-hidden font-sans">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-16 items-start">
         {/* Left Side: ID Badge and Skills */}
         <div className="flex flex-col items-center w-full md:w-[350px] shrink-0 mt-12 md:mt-0">

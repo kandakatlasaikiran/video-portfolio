@@ -17,7 +17,12 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const navLinks = ["Home", "About", "Skills", "Projects", "Contact"];
+  const navLinks = [
+    { label: "Home", href: "#home" },
+    { label: "About", href: "#about" },
+    { label: "Projects", href: "#services" },
+    { label: "Contact", href: "#contact" },
+  ];
 
   // White solid background only once scrolled past the hero and the mobile menu isn't open
   const isLight = isScrolled && !isOpen;
@@ -47,15 +52,17 @@ const Navbar = () => {
 
         {/* Center: Desktop Menu Links */}
         <div className="hidden md:flex space-x-8">
-          {navLinks.map((link) => (
+          {navLinks.map(({ label, href }) => (
             <a
-              key={link}
-              href={`#${link.toLowerCase()}`}
+              key={label}
+              href={href}
               className={`font-medium relative group transition-colors duration-300 ${
-                isLight ? "text-black/80 hover:text-black" : "text-white/80 hover:text-white"
+                isLight
+                  ? "text-black/80 hover:text-black"
+                  : "text-white/80 hover:text-white"
               }`}
             >
-              {link}
+              {label}
               {/* Smooth hover underline */}
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-red-500 transition-all duration-300 group-hover:w-full"></span>
             </a>
@@ -119,14 +126,14 @@ const Navbar = () => {
         }`}
       >
         <div className="flex flex-col px-6 space-y-4">
-          {navLinks.map((link) => (
+          {navLinks.map(({ label, href }) => (
             <a
-              key={link}
-              href={`#${link.toLowerCase()}`}
+              key={label}
+              href={href}
               onClick={() => setIsOpen(false)}
               className="text-white hover:text-black font-bold text-lg border-b border-white/20 pb-2 transition-colors"
             >
-              {link}
+              {label}
             </a>
           ))}
           <div className="pt-4 pb-2">

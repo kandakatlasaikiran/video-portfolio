@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <footer className="bg-[#111111] text-[#d4d4d4] py-16 px-6 md:px-12 w-full font-mono text-[10px] md:text-xs tracking-widest flex flex-col justify-between min-h-[50vh]">
       {/* Top Row */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8 w-full font-medium">
+      {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8 w-full font-medium">
         <div className="flex flex-col gap-1">
           <p>Cinematic & Creative Production</p>
           <p>Lighting, Editing, Photo</p>
@@ -25,7 +25,7 @@ const Footer = () => {
           <p>Worldwide Available</p>
           <p>{new Date().getFullYear()}</p>
         </div>
-      </div>
+      </div> */}
 
       {/* Middle Huge Text */}
       <div className="w-full flex justify-center items-center py-20 md:py-24 overflow-hidden">
