@@ -58,34 +58,43 @@ const ProjectCard = ({ name, category, description, url, index }) => (
     rel="noopener noreferrer"
     data-aos="fade-up"
     data-aos-delay={index * 100}
-    className="group flex flex-col justify-between bg-white rounded-[1.5rem] p-8 border border-gray-200 shadow-[0_15px_40px_rgba(0,0,0,0.06)] hover:shadow-[0_20px_50px_rgba(192,62,46,0.15)] hover:-translate-y-1 transition-all duration-300"
+    className="group w-full rounded-[2rem] p-2 relative flex flex-col items-center bg-white border border-gray-200 shadow-[0_15px_40px_rgba(0,0,0,0.06)] hover:shadow-[0_20px_50px_rgba(255,42,42,0.4)] hover:scale-[1.02] hover:bg-[#C03E2E] hover:border-red-400 transition-all duration-700"
   >
-    <div>
-      <span className="inline-block text-xs font-bold uppercase tracking-widest text-[#C03E2E] mb-4">
+    {/* The hole punch */}
+    <div className="w-5 h-5 bg-gradient-to-br from-gray-300 to-gray-100 rounded-full shadow-[inset_0_2px_4px_rgba(0,0,0,0.3)] absolute top-4 border border-gray-300 z-10 flex items-center justify-center">
+      <div className="w-2 h-2 bg-gray-800 rounded-full opacity-20"></div>
+    </div>
+
+    {/* Inner container */}
+    <div className="w-full h-full rounded-[1.5rem] mt-8 p-8 flex flex-col min-h-[240px] bg-[#f4f4f4] group-hover:bg-red-700/50 transition-colors duration-700">
+      <span className="text-xl font-bold mb-2 font-serif italic text-gray-400 group-hover:text-red-200 transition-colors duration-700">
+        {String(index + 1).padStart(2, "0")}
+      </span>
+      <span className="inline-block text-xs font-bold uppercase tracking-widest text-[#C03E2E] group-hover:text-red-100 mb-2 transition-colors duration-700">
         {category}
       </span>
-      <h3 className="text-2xl font-black text-gray-900 mb-3 tracking-tight group-hover:text-[#C03E2E] transition-colors">
+      <h3 className="text-2xl font-black mb-3 tracking-tight text-gray-900 group-hover:text-white transition-colors duration-700">
         {name}
       </h3>
-      <p className="text-sm text-gray-500 leading-relaxed font-medium">
+      <p className="text-sm leading-relaxed font-medium text-gray-500 group-hover:text-red-100 transition-colors duration-700 flex-1">
         {description}
       </p>
-    </div>
-    <div className="flex items-center gap-2 mt-6 text-sm font-bold text-gray-900 group-hover:text-[#C03E2E] transition-colors">
-      Visit Site
-      <svg
-        className="w-4 h-4 transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"
-        fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth="2"
-          d="M7 17L17 7M7 7h10v10"
-        />
-      </svg>
+      <div className="flex items-center gap-2 mt-6 text-sm font-bold text-gray-900 group-hover:text-white transition-colors duration-700">
+        Visit Site
+        <svg
+          className="w-4 h-4 transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            d="M7 17L17 7M7 7h10v10"
+          />
+        </svg>
+      </div>
     </div>
   </a>
 );
